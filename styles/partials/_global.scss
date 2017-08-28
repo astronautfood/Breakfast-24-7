@@ -1,0 +1,44 @@
+body {
+	margin: 0;
+}
+
+body.before-five {
+	background: linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%); 
+}
+
+body.at-five {
+	background: linear-gradient(to bottom, #757abf 0%,#8583be 60%,#eab0d1 100%);
+}
+
+// background codepeon by https://codepen.io/billyysea/
+
+@font-face {
+	font-family: 'digital-7regular';
+	src: url('digital-7-webfont.woff2') format('woff2'),
+		url('digital-7-webfont.woff') format('woff'),
+		url('digital-7-webfont.woff') format('tff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+.wrapper {
+	width: 1180px;
+	max-width: 90%;
+	margin: 0 auto;
+	height:100%;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+h1,
+h2,
+h4,
+.leaflet-popup-content p {
+	margin: 0;
+}
+

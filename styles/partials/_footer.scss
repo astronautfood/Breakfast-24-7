@@ -1,0 +1,77 @@
+footer {
+	background: #333;
+	border-top: 4px solid #00CED1;
+	height: 60px;
+}
+
+.at-five footer {
+		border-top: 4px solid #9370DB;
+}
+
+.footer__wrapper--inner,
+.footer__info,
+.footer__info--api {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+h4.footer__info,
+h4.footer__info--api {
+	font-size: 16px;
+	letter-spacing: 1.4px;
+	font-weight: 300;
+	// width: 20%;
+	text-align: left;
+	padding-top: 10px;
+	font-family: $pFont;
+	color: #FFF;
+	img {
+		width: 40px;
+		padding-bottom: 5px;
+	}
+	@include respond-to(large) {
+		font-size: 12px;
+	}
+	@include respond-to(medium) {
+		font-size: 10px;
+	}
+}
+
+.footer__info {
+	flex-direction: row-reverse;
+	img {
+		margin-left: 100px;
+		@include respond-to(large) {
+			margin-left: 50px;
+		}
+		@include respond-to(small) {
+			margin-left: 10px;
+		}
+	}
+}
+
+.footer__info--api {
+	img {
+		margin-right: 100px;
+		@include respond-to(large) {
+			margin-right: 50px;
+		}
+		@include respond-to(small) {
+			margin-right: 10px;
+		}
+	}
+}
+
+h4.footer__info--api {
+	margin-left: 70px;
+	@include respond-to(large) {
+		margin-left: 40px;
+	}
+	@include respond-to(small) {
+		margin-left: 10px;
+	}
+}
+
+
+

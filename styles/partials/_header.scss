@@ -1,0 +1,88 @@
+h1.page-title {
+	padding: 0 0 10px;
+	font-family: $headingFont;
+	text-align: center;
+	color: #FFF;
+	font-size: 75px;
+	text-shadow: 0px 1px 0 #333,
+					2px 2px 0 #66c2e8,
+					3px 3px 0 #66c2e8,
+					4px 4px 0 #66c2e8,
+					5px 5px 0 #66c2e8,
+					6px 6px 0 #66c2e8,
+					7px 7px 0 #66c2e8,
+					8px 8px 0 #66c2e8,
+					9px 9px 0 #66c2e8,
+					10px 10px #66c2e8,
+					11px 11px #66c2e8,
+					12px 12px #66c2e8,
+					13px 13px #66c2e8,
+					14px 14px #66c2e8,
+					15px 15px #66c2e8,
+					16px 16px #66c2e8,
+					17px 17px #66c2e8,
+					18px 18px #66c2e8,
+					19px 19px #66c2e8,
+					20px 20px #66c2e8,
+					21px 21px #66c2e8,
+					22px 22px #66c2e8,
+					23px 23px #66c2e8,
+					24px 24px #66c2e8,
+					25px 25px #66c2e8,
+					26px 26px #66c2e8,
+					27px 27px #66c2e8;
+		@include respond-to(medium) {
+			font-size: 60px;
+		}			
+}
+
+.at-five h1.page-title {
+		text-shadow: 0px 1px 0 #333,
+						2px 2px 0 #6A5ACD,
+						3px 3px 0 #6A5ACD,
+						4px 4px 0 #6A5ACD,
+						5px 5px 0 #6A5ACD,
+						6px 6px 0 #6A5ACD,
+						7px 7px 0 #6A5ACD,
+						8px 8px 0 #6A5ACD,
+						9px 9px 0 #6A5ACD,
+						10px 10px #6A5ACD,
+						11px 11px #6A5ACD,
+						12px 12px #6A5ACD,
+						13px 13px #6A5ACD,
+						14px 14px #6A5ACD,
+						15px 15px #6A5ACD,
+						16px 16px #6A5ACD,
+						17px 17px #6A5ACD,
+						18px 18px #6A5ACD,
+						19px 19px #6A5ACD,
+						20px 20px #6A5ACD,
+						21px 21px #6A5ACD,
+						22px 22px #6A5ACD,
+						23px 23px #6A5ACD,
+						24px 24px #6A5ACD,
+						25px 25px #6A5ACD,
+						26px 26px #6A5ACD,
+						27px 27px #6A5ACD;
+}
+
+p.header__app-info {
+	font-family: $pFont;
+	font-size: 18px;
+	color: #333;
+	text-align: center;
+	padding: 30px 0 40px;
+	width: 60%;
+	margin: 0 auto;
+}
+
+
+.header__img-wrapper {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0;
+	.header__img {
+		width: 70px;
+	}
+}

@@ -1,0 +1,77 @@
+.clock__wrapper {
+	width: calc(60% - 100px);
+	margin: 60px auto;
+	background: #d3d3d3;
+	border: 40px solid #f5f5f5;
+	border-radius: 20px;
+	box-shadow: 0 4px 10px -2px #333;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	@include respond-to(medium) {
+		margin: 40px auto;
+	}
+	@include respond-to(small) {
+		border: 20px solid #f5f5f5;
+	}
+} 
+
+.clock__wrapper--inner {
+	display: flex;
+	justify-content: space-around;
+}
+
+.clock--top {
+	font-size: 12px;
+	display: inline-block;
+	padding: 15px 0 15px 20px;
+	color: #a9a9a9;
+	text-align: center;
+	font-family: 'roboto', sans-serif;
+	background: #d3d3d3;
+	text-transform: uppercase;
+	@include respond-to(large) {
+		padding: 15px 0 15px 10px;
+	}
+	@include respond-to(medium) {
+		font-size: 10px;
+		padding-left: 5px; 
+	}
+	@include respond-to(small) {
+		display: none;
+	}
+}
+
+.clock--top span {
+	color: #000;
+}
+
+
+.clock--top:first-child {
+	padding-left: 0px;
+}
+
+#clock {
+	width: 100%;
+	font-family: 'digital-7regular', sans-serif;
+	font-weight: normal;
+	font-size: 80px;
+	letter-spacing: 5px;
+	text-align: center;
+	color: #000;
+	background: #d3d3d3;
+	padding: 5px 0 15px;
+	@include respond-to(medium) {
+		letter-spacing: 1.4px;
+		font-size: 60px;
+		overflow: hidden;
+	}
+	@include respond-to(small) {
+		padding-bottom: 5px;
+	}
+}
+
+
+
+

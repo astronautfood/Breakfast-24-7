@@ -1,0 +1,60 @@
+#map {
+	height: 70vh;
+	width: 100%;
+	display: block;
+	margin: 150px auto 75px;
+	border-radius: 15px;
+	border: 20px solid #fff;
+	box-shadow: 0 2px 4px 0px #333;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+	background: linear-gradient(to bottom, #20202c 0%,#515175 100%);
+}
+
+.leaflet-popup-content {
+	 background: linear-gradient(to bottom, #20202c 0%,#515175 100%);
+	margin: 0;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+h2.restaurant-name,
+p.restaurant-cuisine,
+p.restaurant-location,
+p.restaurant-rating {
+	font-family: $pFont;
+	text-align: center;
+	color: #fff;
+}
+
+h2.restaurant-name {
+	font-size: 20px;
+}
+
+p.restaurant-cuisine {
+	font-size: 12px;
+}
+
+p.restaurant-location {
+	font-size: 13px;
+	padding: 5px 0;
+	font-weight: 700;
+}
+
+p.restaurant-rating {
+	padding-bottom: 5px;
+	&::before {
+		content: "Rating";
+		margin-right: 5px;
+	}
+}
+
+.leaflet-popup-content img {
+	max-width: 100px;
+	width: 100%; 
+	margin: 0 auto;
+	border-radius: 10px;
+	border: 3px solid #FFF;
+}

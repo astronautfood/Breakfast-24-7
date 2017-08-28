@@ -1,0 +1,23 @@
+a[href="#to-map"] {
+	height:50px;
+	display:block;
+}
+
+img.to-map--smooth-scroll {
+	width: 60px;
+	transition: all 0.5s;
+	margin-bottom: 50px;
+}
+
+img.to-map--smooth-scroll::after {
+	content: "";
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(45deg);
+}
+
+img.to-map--smooth-scroll:hover {
+	transform: rotate(360deg);
+}

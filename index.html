@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Breakfast</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles/styles.css">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto|Open+Sans+Condensed:300" rel="stylesheet">
+</head>
+<body class ="before-five" class="at-five">
+	<header>
+		<div class="wrapper">
+			<h1 class="page-title">Breakfast 24/7</h1>
+			<p class="header__app-info">Find out where to eat the most important meal of the day. All day, anytime.</p>
+			<div class="header__img-wrapper">
+				<img src="assets/bread.png" alt="" class="header__img">
+				<img src="assets/coffee.png" alt="" class="header__img">
+				<img src="assets/fried-egg (1).png" alt="" class="header__img">
+				<img src="assets/protein (1).png" alt="" class="header__img">
+				<img src="assets/pancakes.png" alt="" class="header__img">
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="clock__wrapper">
+			<div class="clock__wrapper--inner">
+				<div class="clock--top"><span>Breakfast</span></div>
+				<div class="clock--top">lunch</div>
+				<div class="clock--top">brunch</div>
+				<div class="clock--top">snack</div>
+				<div class="clock--top">dinner</div>
+				<div class="clock--top">snack</div>
+			</div>
+			<div id="clock">
+			</div>
+		</div>
+		<a href="#to-map"><img src="assets/kitchen-pack.png" alt="" class="to-map--smooth-scroll"></a>
+	</section>
+	<main>
+		 <div id="to-map" class="wrapper">
+		 	<div id="map"></div>
+		 </div>
+	</main>
+	<footer>
+		<div class="wrapper">
+			<div class="footer__wrapper--inner">
+				<h4 class="footer__info"><img src="assets/fried-egg (1).png" alt="">Created by Dana Manoli. HY Cohort 15, 2017</h4>
+				<h4 class="footer__info--api"><img src="assets/chicken.png" alt="">Website powered by Zomato and Leaflet</h4>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="scripts/jquery.smooth-scroll.min.js"></script>
+	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+	   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+	   crossorigin=""></script>	
+	<script src="scripts/app.js"></script>
+    <script src="scripts/clock.js"></script>
+</body>
+</html>
