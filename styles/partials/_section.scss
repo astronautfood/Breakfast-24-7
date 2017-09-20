@@ -4,9 +4,10 @@ a[href="#to-map"] {
 }
 
 img.to-map--smooth-scroll {
-	width: 60px;
+	width: 80px;
 	transition: all 0.5s;
-	margin-bottom: 50px;
+	position: relative;
+	left: 10px;
 }
 
 img.to-map--smooth-scroll::after {

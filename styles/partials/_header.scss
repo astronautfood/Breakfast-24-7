@@ -1,5 +1,9 @@
+.hero {
+	height: 100vh;
+}
+
 h1.page-title {
-	padding: 0 0 10px;
+	padding: 20px 0 10px;
 	font-family: $headingFont;
 	text-align: center;
 	color: #FFF;
@@ -68,21 +72,75 @@ h1.page-title {
 
 p.header__app-info {
 	font-family: $pFont;
-	font-size: 18px;
-	color: #333;
+	font-size: 30px;
+	color: #FFF;
+	letter-spacing: 1.4px;
 	text-align: center;
-	padding: 30px 0 40px;
+	padding: 0 0 40px;
+	position: relative;
 	width: 60%;
 	margin: 0 auto;
+	&:before {
+		content: "";
+		width: 90%;
+		position: absolute;
+		top: -20px;
+		left: 50px;
+		border-bottom: 2px solid #FFF;
+	}
+} 
+
+p.header__app-info:after {
+	content: "";
+	width: 90%;
+	position: absolute;
+	bottom: 20px;
+	left: 50px;
+	border-bottom: 2px solid #FFF;
 }
 
+p.click {
+	font-family: $pFont;
+	font-size: 16px;
+	color: #FFF;
+	text-align: center;
+	margin: 0 auto;
+	padding: 35px 0;
+}
 
 .header__img-wrapper {
+	width: 65%;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	margin: 0;
+	margin: 35px auto 0;
+	padding-bottom: 30px;
 	.header__img {
 		width: 70px;
 	}
 }
+
+form label {
+	display: block;
+	width: 210px;
+	margin: 50px auto 10px;
+	color: #FFF;
+	text-transform: uppercase;
+}
+
+select { 
+	width: 200px;
+	margin: 0 auto 100px;
+	display: block; 
+	padding: 10px 70px 10px 13px !important; 
+	max-width: 100%; height: auto !important; 
+	border: 1px solid #e3e3e3; 
+	border-radius: 3px; 
+	background: url("https://image.ibb.co/iMeAJv/selectbox_arrow.png") right center no-repeat; 
+	background-color: #fff; 
+	color: #444444; font-size: 12px; 
+	line-height: 16px !important; 
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none; 
+} 

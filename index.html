@@ -11,37 +11,51 @@
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto|Open+Sans+Condensed:300" rel="stylesheet">
 </head>
 <body class ="before-five" class="at-five">
-	<header>
-		<div class="wrapper">
-			<h1 class="page-title">Breakfast 24/7</h1>
-			<p class="header__app-info">Find out where to eat the most important meal of the day. All day, anytime.</p>
-			<div class="header__img-wrapper">
-				<img src="assets/bread.png" alt="" class="header__img">
-				<img src="assets/coffee.png" alt="" class="header__img">
-				<img src="assets/fried-egg (1).png" alt="" class="header__img">
-				<img src="assets/protein (1).png" alt="" class="header__img">
-				<img src="assets/pancakes.png" alt="" class="header__img">
+	<section class="hero">
+		<header>
+			<div class="wrapper">
+				<h1 class="page-title">Breakfast 24/7</h1>
+				<div class="header__img-wrapper">
+					<img src="assets/bread.png" alt="" class="header__img">
+					<img src="assets/coffee.png" alt="" class="header__img">
+					<img src="assets/fried-egg (1).png" alt="" class="header__img">
+					<img src="assets/protein (1).png" alt="" class="header__img">
+					<img src="assets/pancakes.png" alt="" class="header__img">
+				</div>
 			</div>
-		</div>
-	</header>
-	<section>
-		<div class="clock__wrapper">
-			<div class="clock__wrapper--inner">
-				<div class="clock--top"><span>Breakfast</span></div>
-				<div class="clock--top">lunch</div>
-				<div class="clock--top">brunch</div>
-				<div class="clock--top">snack</div>
-				<div class="clock--top">dinner</div>
-				<div class="clock--top">snack</div>
+		</header>
+		<section>
+			<div class="clock__wrapper">
+				<div class="clock__wrapper--inner">
+					<div class="clock--top"><span>Breakfast</span></div>
+					<div class="clock--top">lunch</div>
+					<div class="clock--top">brunch</div>
+					<div class="clock--top">snack</div>
+					<div class="clock--top">dinner</div>
+					<div class="clock--top">snack</div>
+				</div>
+				<div id="clock">
+				</div>
 			</div>
-			<div id="clock">
+			<p class="header__app-info">Find out where to eat the most important meal of the day. All day, anytime</p>
+			<div class="select-styling">
+				<form action="">
+					<label for="city">Choose your location:</label>
+					<select name="city" id="city">
+						<option value="89">Toronto</option>
+						<option value="3477">Hamilton</option>
+						<option value="3454">London</option>
+						<option value="294">Montreal</option>
+				  </select>
+				</form> 
 			</div>
-		</div>
-		<a href="#to-map"><img src="assets/kitchen-pack.png" alt="" class="to-map--smooth-scroll"></a>
+			<a href="#to-map"><img src="assets/kitchen-pack.png" alt="" class="to-map--smooth-scroll"></a>
+			<p class="click">Click me!</p>
+		</section>
 	</section>
 	<main>
 		 <div id="to-map" class="wrapper">
-		 	<div id="map"></div>
+			<div id="map"></div>
 		 </div>
 	</main>
 	<footer>
@@ -59,6 +73,6 @@
 	   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
 	   crossorigin=""></script>	
 	<script src="scripts/app.js"></script>
-    <script src="scripts/clock.js"></script>
+	<script src="scripts/clock.js"></script>
 </body>
 </html>

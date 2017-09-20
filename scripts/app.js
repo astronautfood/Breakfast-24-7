@@ -1,9 +1,20 @@
 const breakfastApp = {};
 
+breakfastApp.locations = {
+	"89": [43.64701, -79.39425],
+	"3477": [43.244077, -79.856873],
+	"3454": [42.986316, -81.238403],
+	"294": [45.519579, -73.547974]
+}
+
 //pass location parameter thru the function in order to call them below
 breakfastApp.renderMap = function(lat, long) {
+	lat = Number(lat);
+	long = Number(long);
+	console.log(lat, long)
+
 	breakfastApp.map = L.map('map',{
-		center: [43.64701, -79.39425],
+		center: [lat, long],
 		zoom: 13,
 		scrollWheelZoom:false
 	});
@@ -15,13 +26,17 @@ breakfastApp.renderMap = function(lat, long) {
 		}).addTo(breakfastApp.map);
 }
 
+breakfastApp.setMap = (latLng) => {
+	breakfastApp.map.setView(latLng)
+}
+
 breakfastApp.key = '283b1493b5a6430dab4f1d299afbc6ff';
 
 //write a function for the map that grabs the restaurants and can be passed thru the init function
-breakfastApp.getFood = function() {
+breakfastApp.getFood = function(id) {
 	//make an ajax request
 	$.ajax({
-		url: `https://developers.zomato.com/api/v2.1/search?entity_id=89&entity_type=city&cuisines=182`,
+		url: `https://developers.zomato.com/api/v2.1/search?entity_id=${id}&entity_type=city&cuisines=182`,
 		method: 'GET',
 		dataType: 'json',
 		data: {
@@ -30,29 +45,29 @@ breakfastApp.getFood = function() {
 		}
 		//get API response
 	}).then(function(res){
+		console.log("get food", res)
 		const breakfastData = res.restaurants;
 		console.log(res.restaurants);
 
 		breakfastApp.displayBreakfast(breakfastData);
-		breakfastApp.renderMap(breakfastData.lat, breakfastData.long)
 	});
 }
 
 //write a function to display restaurants
 //breakfastData is data 'runner'
 breakfastApp.displayBreakfast = function(breakfastData) {
-	
-	//loop over the array
-	breakfastData.forEach(function(restaurant){
+	console.log(breakfastData)
 
+	breakfastData.forEach((restaurant) => {
+		// console.log(item.restaurant);
 		const icon = L.icon({
 			iconUrl: 'assets/kitchen-pack.png',
 
-			iconSize:     [45, 45], // size of the icon
+			iconSize: [45, 45], // size of the icon
 			//link data to the marker	
 		});
 
-		//create data to be displayed dynamically
+		console.log(icon);
 		const popupContent = `
 			<h2 class="restaurant-name">${restaurant.restaurant.name}</h2>
 			<p class="restaurant-cuisine">${restaurant.restaurant.cuisines}</p>
@@ -67,7 +82,9 @@ breakfastApp.displayBreakfast = function(breakfastData) {
 			).addTo(breakfastApp.map);
 
 		marker.bindPopup(popupContent)
-	});
+
+	})
+		
 }
 
 breakfastApp.breakfastSmoothScroll = function() {
@@ -81,11 +98,22 @@ breakfastApp.breakfastSmoothScroll = function() {
 
 //initailize the code
 breakfastApp.init = function() {
-	breakfastApp.getFood();
-	breakfastApp.renderMap();
+	// breakfastApp.renderMap();
 	breakfastApp.breakfastSmoothScroll();
+	breakfastApp.selectBreak();
+	breakfastApp.renderMap(43.64701, -79.39425);
+	breakfastApp.getFood(89)
 }
 
+breakfastApp.selectBreak = function() {
+	$('select').on('change', function(){
+		// console.log(typeof $(this).val());
+		const idNumber = parseInt($(this).val());
+		breakfastApp.getFood(idNumber)
+		breakfastApp.setMap(breakfastApp.locations[idNumber]);
+
+	});	 
+}
 //have document ready run init
 $(function(){
 	breakfastApp.init();
